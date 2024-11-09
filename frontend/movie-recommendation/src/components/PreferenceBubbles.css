@@ -1,0 +1,79 @@
+/* PreferenceBubbles.css */
+
+.preference-bubbles {
+    text-align: center;
+    padding: 20px;
+}
+
+.bubbles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.bubble {
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, top 0.5s;
+    user-select: none;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.bubble:hover {
+    background-color: #e0484e;
+    transform: scale(1.1);
+}
+
+.bubble.selected {
+    background-color: #00a699;
+    top: 300px; /* Падение вниз */
+    opacity: 0;
+    transition: top 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.selected-bubbles-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.selected-bubbles-container .bubble {
+    position: static; /* Убираем падение для выбранных пузырьков */
+    top: 0;
+    transform: none;
+    opacity: 1;
+    background-color: #00a699;
+    transition: none;
+    width: 80px;
+    height: 80px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}

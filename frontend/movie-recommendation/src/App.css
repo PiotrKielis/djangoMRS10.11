@@ -1,0 +1,176 @@
+/* App.css */
+
+/* Основные стили для всего приложения */
+.app {
+  font-family: Arial, sans-serif;
+}
+
+/* Темная тема */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Светлая тема */
+.light-theme {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* Основной контент */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Контейнер для фильмов */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 60px; /* Отступ для футера */
+}
+
+/* Стиль заголовка фильмов */
+.movies-header {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Кнопки навигации и фильтров */
+.nav-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+/* Пагинация */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination-container button {
+  margin: 0 10px;
+}
+
+/* Модальное окно для логина и регистрации */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333; /* Темный фон для модального окна */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Поверх всех остальных элементов */
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Фон-оверлей для затемнения */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Позади модального окна, но впереди всего остального */
+}
+
+/* Кнопка для закрытия модального окна */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Стиль заголовка в модальном окне */
+.modal h2 {
+  color: #ffffff;
+}
+
+/* Стили для формы логина и регистрации */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Стили для кнопок в форме */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-button,
+.register-button,
+.back-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button {
+  background-color: #d4af37; /* Золотой цвет для кнопки логина */
+  color: #000;
+}
+
+.login-button:hover {
+  background-color: #b38e30;
+}
+
+.register-button {
+  background-color: #007bff; /* Синий цвет для кнопки регистрации */
+  color: #ffffff;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  background-color: #666; /* Серый цвет для кнопки назад */
+  color: #ffffff;
+}
+
+.back-button:hover {
+  background-color: #444;
+}

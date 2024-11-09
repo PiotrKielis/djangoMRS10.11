@@ -1,0 +1,64 @@
+/* FilterForm.css */
+
+/* Основной контейнер для фильтров */
+.filter-form-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Общие стили для светлой темы */
+.filter-form-container.light-theme {
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #000000; /* Черный текст */
+}
+
+/* Стили для темной темы */
+.filter-form-container.dark-theme {
+    background-color: #333333; /* Темный фон */
+    color: #ffffff; /* Белый текст для видимости в темной теме */
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Общие стили для полей ввода и селектов */
+.filter-form input[type="text"],
+.filter-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* Светлый фон для ввода */
+    color: #333; /* Текст для светлого поля */
+}
+
+/* Стили для полей ввода и селектов в темной теме */
+.filter-form-container.dark-theme input[type="text"],
+.filter-form-container.dark-theme select {
+    background-color: #444444; /* Темный фон для ввода */
+    color: #ffffff; /* Белый текст для ввода */
+    border: 1px solid #666666; /* Граница для полей ввода в темной теме */
+}
+
+/* Стили для кнопок */
+.filter-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,201 @@
+/* index.css */
+
+/* Основные стили для body и html */
+body, html {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #333; /* Нейтральный темный для текста */
+}
+
+/* Темная тема */
+.dark-theme {
+    background-color: #000000; /* Глубокий черный фон для темной темы */
+    color: #f0f0f0; /* Очень светлый серый для текста */
+}
+
+.dark-theme .header,
+.dark-theme .footer {
+    background-color: #1c1c1e; /* Глубокий темно-серый */
+    color: #f0f0f0; /* Белый текст */
+    border-bottom: 1px solid #444; /* Легкий акцент на границу */
+}
+
+.dark-theme .main-content {
+    background-color: #1c1c1e; /* Глубокий темно-серый фон */
+    color: #f0f0f0; /* Белый текст */
+    min-height: calc(100vh - 200px); /* Высота контента, чтобы занимать всю страницу */
+}
+
+.dark-theme .nav-button,
+.dark-theme .footer-button,
+.dark-theme .random-button,
+.dark-theme .back-button {
+    background: linear-gradient(135deg, #3a3a3c, #636366); /* Легкий градиент для объема */
+    color: #ffffff; /* Белый текст на кнопках */
+    border: none;
+    border-radius: 12px; /* Закругленные углы для Apple-стиля */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Мягкая тень для объема */
+}
+
+.dark-theme .nav-button:hover,
+.dark-theme .footer-button:hover,
+.dark-theme .random-button:hover,
+.dark-theme .back-button:hover {
+    background: #636366; /* Немного светлее при наведении */
+}
+
+/* Светлая тема */
+.light-theme {
+    background-color: #f8f8f8; /* Светло-серый фон для светлой темы */
+    color: #333333; /* Темный текст для контраста */
+}
+
+.light-theme .header,
+.light-theme .footer {
+    background-color: #ffffff; /* Белый фон для хедера и футера */
+    color: #333333; /* Темный текст */
+    border-bottom: 1px solid #e0e0e0; /* Легкий акцент на границу */
+}
+
+.light-theme .main-content {
+    background-color: #ffffff; /* Белый фон для основной части */
+    color: #333333; /* Темный текст */
+    min-height: calc(100vh - 200px); /* Высота контента */
+}
+
+.light-theme .nav-button,
+.light-theme .footer-button,
+.light-theme .random-button,
+.light-theme .back-button {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Градиент для объема */
+    color: #333333; /* Темный текст */
+    border: none;
+    border-radius: 12px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Мягкая тень */
+}
+
+.light-theme .nav-button:hover,
+.light-theme .footer-button:hover,
+.light-theme .random-button:hover,
+.light-theme .back-button:hover {
+    background: #e0e0e0; /* Немного светлее при наведении */
+}
+
+/* Общие стили для кнопок и элементов */
+button {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none; /* Убираем стандартное выделение */
+}
+
+.filter-section {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+}
+
+.filter-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: inherit; /* Цвет зависит от темы */
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-select,
+.filter-input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 180px;
+    transition: border-color 0.3s;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    border-color: #007aff; /* Акцентный цвет, как у Apple */
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007aff; /* Акцентный синий цвет, как у Apple */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.search-button:hover {
+    background-color: #005bb5; /* Темнее при наведении */
+}
+
+.header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-top: 100px; /* Отступ от хедера */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Учитываем отступы и границы при расчете высоты */
+}
+
+.movie-banner-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #007aff; /* Акцентный цвет */
+    color: #ffffff;
+}
+
+.footer-button:hover {
+    background-color: #005bb5; /* Темнее при наведении */
+}

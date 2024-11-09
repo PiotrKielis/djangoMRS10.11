@@ -1,0 +1,46 @@
+/* Header.css */
+
+/* Основной контейнер хедера */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем все содержимое хедера */
+    padding: 15px 20px;
+    background-color: inherit; /* Цвет берется из темы */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Центральная секция с элементами */
+.middle-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Промежуток между иконкой домика, переключателем темы и кнопкой логина */
+}
+
+/* Минималистичная иконка домика с обводкой */
+.home-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Общий стиль для кнопок навигации */
+.nav-button {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #007BFF; /* Синий цвет кнопок */
+    color: #ffffff; /* Белый текст на кнопках */
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
