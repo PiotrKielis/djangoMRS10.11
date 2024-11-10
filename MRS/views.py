@@ -8,8 +8,8 @@ from rest_framework.decorators import api_view  # Dodaj ten import
 from rest_framework.response import Response  # Dodaj ten import
 from rest_framework import status  # Dodaj ten import
 from django.contrib.auth import authenticate  # Dodaj ten import
-
-from rest_framework import viewsets
+from django.http import JsonResponse
+from rest_framework import viewsets, filters
 from .models import User, Movie, Rating, Ulubione
 from .serializers import UserSerializer, MovieSerializer, RatingSerializer, UlubioneSerializer
 
@@ -22,6 +22,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'genre']
 
 
 class RatingViewSet(viewsets.ModelViewSet):
@@ -43,3 +45,8 @@ def login_view(request):
         return Response({'status': 'success', 'username': username})
     else:
         return Response({'status': 'error', 'message': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+def movie_list(request):
+    movies = list(Movie.objects.values())
+    return JsonResponse(movies, safe=False)
